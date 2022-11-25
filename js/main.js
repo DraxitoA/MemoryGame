@@ -87,7 +87,7 @@ function uncover(id){
 
             //Increase Hits
             hits++;
-            showHits.innerHTML = `Hits: ${hits}`;
+            showHits.innerHTML = `Aciertos: ${hits}`;
             rigthAudio.play();
 
             if(hits == 8){
@@ -95,7 +95,7 @@ function uncover(id){
                 clearInterval(regressiveTimeId);
                 showHits.innerHTML = `Acertaste ${hits} veces!🤪`
                 showTime.innerHTML = `Demorastes ${initialClock - clock} segundos!⌛`
-                showMovements.innerHTML = `Movimientos: Hiciste ${movements} movimientos!🧩`
+                showMovements.innerHTML = `Hiciste ${movements} movimientos!🧩`
             }
 
         }else{
