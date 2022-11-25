@@ -31,7 +31,7 @@ console.log(numbers);
 function countTime(){
     regressiveTimeId = setInterval(()=>{
         clock--;
-        showTime.innerHTML = `Tiempo : ${clock} segundos`; 
+        showTime.innerHTML = `Tiempo: ${clock}s`; 
         if(clock == 0){
             clearInterval(regressiveTimeId);
             blockCards();
@@ -93,9 +93,9 @@ function uncover(id){
             if(hits == 8){
                 winAudio.play();
                 clearInterval(regressiveTimeId);
-                showHits.innerHTML = `Aciertos: Acertaste ${hits} veces!`
-                showTime.innerHTML = `Solo te tomaste ${initialClock - clock} segundos!`
-                showMovements.innerHTML = `Movements: Hiciste ${movements} movimientos!`
+                showHits.innerHTML = `Acertaste ${hits} veces!🤪`
+                showTime.innerHTML = `Demorastes ${initialClock - clock} segundos!⌛`
+                showMovements.innerHTML = `Movimientos: Hiciste ${movements} movimientos!🧩`
             }
 
         }else{
