@@ -31,7 +31,7 @@ console.log(numbers);
 function countTime(){
     regressiveTimeId = setInterval(()=>{
         clock--;
-        showTime.innerHTML = `Time : ${clock} seconds`; 
+        showTime.innerHTML = `Tiempo : ${clock} segundos`; 
         if(clock == 0){
             clearInterval(regressiveTimeId);
             blockCards();
@@ -79,7 +79,7 @@ function uncover(id){
 
         //Increase Movements
         movements++;
-        showMovements.innerHTML = `Movements: ${movements}`;
+        showMovements.innerHTML = `Movimientos: ${movements}`;
 
         if(firstResult == secondResult){
             //Lock up uncovered cards
