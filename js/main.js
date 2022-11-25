@@ -93,9 +93,9 @@ function uncover(id){
             if(hits == 8){
                 winAudio.play();
                 clearInterval(regressiveTimeId);
-                showHits.innerHTML = `Hits: You got ${hits} hits!`
-                showTime.innerHTML = ` You only took ${initialClock - clock} seconds!`
-                showMovements.innerHTML = `Movements: You got ${movements} moves!`
+                showHits.innerHTML = `Aciertos: Acertaste ${hits} veces!`
+                showTime.innerHTML = `Solo te tomaste ${initialClock - clock} segundos!`
+                showMovements.innerHTML = `Movements: Hiciste ${movements} movimientos!`
             }
 
         }else{
