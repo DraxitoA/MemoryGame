@@ -21,9 +21,9 @@ h1{
 button{
     height: 100px;
     width: 100px;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
-    font-weight: bold;
+    font-weight: medium;
 }
 button:hover{
     cursor: pointer;
