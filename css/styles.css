@@ -1,7 +1,7 @@
 body{
     background: rgb(102,96,215);
     background: linear-gradient(90deg, rgba(102,96,215,1) 0%, rgba(74,74,190,1) 36%, rgba(0,212,255,1) 100%);
-    font-family: Trebuchet MS;
+    font-family: "Rubik" , sans-serif;
     color: white;
 }
 main{
