@@ -1,4 +1,3 @@
-//Variable Initialization
 let uncoverCards = 0;
 let card1 = null;
 let card2 = null;
@@ -11,7 +10,6 @@ let clock = 60;
 let initialClock = 60;
 let regressiveTimeId = null;
 
-//Appointing to HTML Document
 let showMovements = document.getElementById('movements');
 let showHits = document.getElementById('hits');
 let showTime = document.getElementById('t-left');
@@ -22,12 +20,10 @@ let clickAudio = new Audio('./sounds/click.wav');
 let rigthAudio = new Audio('./sounds/right.wav');
 let wrongAudio = new Audio('./sounds/wrong.wav');
 
-//Random Number Generation
 let numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
 numbers = numbers.sort(()=>{return Math.random()-0.5});
 console.log(numbers);
 
-//Functions
 function countTime(){
     regressiveTimeId = setInterval(()=>{
         clock--;
@@ -48,7 +44,6 @@ function blockCards(){
     }
 }
 
-//Principal Function
 function uncover(id){
 
     if(timer == false){
@@ -60,32 +55,25 @@ function uncover(id){
     console.log(uncoverCards)
 
     if(uncoverCards == 1){
-        //Show 1st Number
         card1 = document.getElementById(id);
         firstResult = numbers[id]
         card1.innerHTML = `<img src="./img/${firstResult}.png" alt="">`;
         clickAudio.play();
 
-        //Disable 1st Button
         card1.disabled = true;
     }else if(uncoverCards == 2){
-        //Show 2nd Number
         card2 = document.getElementById(id);
         secondResult = numbers[id];
         card2.innerHTML = `<img src="./img/${secondResult}.png" alt="">`;
 
-        //Disable 2nd Button
         card2.disabled = true;
 
-        //Increase Movements
         movements++;
         showMovements.innerHTML = `Movimientos: ${movements}`;
 
         if(firstResult == secondResult){
-            //Lock up uncovered cards
             uncoverCards = 0;
 
-            //Increase Hits
             hits++;
             showHits.innerHTML = `Aciertos: ${hits}`;
             rigthAudio.play();
@@ -93,14 +81,13 @@ function uncover(id){
             if(hits == 8){
                 winAudio.play();
                 clearInterval(regressiveTimeId);
-                showHits.innerHTML = `Acertaste ${hits} veces!🤪`
-                showTime.innerHTML = `Demorastes ${initialClock - clock} segundos!⌛`
-                showMovements.innerHTML = `Hiciste ${movements} movimientos!🧩`
+                showHits.innerHTML = `Acertaste ${hits} veces...`
+                showTime.innerHTML = `Demorastes ${initialClock - clock} segundos... ⌛`
+                showMovements.innerHTML = `Hiciste ${movements} movimientos... 🧩`
             }
 
         }else{
             wrongAudio.play();
-            //Show values momentarily & cover again
             setTimeout(()=>{
                 card1.innerHTML = ' ';
                 card2.innerHTML = ' ';
